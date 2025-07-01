@@ -24,7 +24,7 @@ export const App = () => {
       return;
     }
 
-    const id = Math.max(...todos.map(todo => todo.id)) + 1;
+    const id = todos.length ? Math.max(...todos.map(todo => todo.id)) + 1 : 1;
     const user = findUserById(usersFromServer, userId);
 
     setTodos([
